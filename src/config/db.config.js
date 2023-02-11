@@ -13,10 +13,10 @@ const {
 const dbConfig = {
     HOST: DB_HOST,
     USER: DB_USER_NAME,
-    PASSWORD: DB_PASSWORD,
+    PASSWORD: "",
     DB: DB_NAME,
     dialect: DB_DIALECT,
-    port: DB_PORT
+    port: "3307"
     // pool: {
     //   max: 5,
     //   min: 0,
