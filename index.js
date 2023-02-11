@@ -2,7 +2,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import db from "./src/models/index.js";
-import user_routes from "./src/routes/userRoutes.js";
+import user_routes from "./src/routes/UserRoutes/userRoutes.js";
 dotenv.config()
 
 /* Configuration */

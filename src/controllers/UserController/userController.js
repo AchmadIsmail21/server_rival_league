@@ -1,4 +1,4 @@
-import db from "../models/index.js";
+import db from "../../models/index.js";
 import { request, response } from "express";
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken"
@@ -59,9 +59,6 @@ export const loginUser = async (req = request, res = response) => {
         const userEmail = await User.findOne({where : {
             email: email
         }});
-        // const userPassword = await User.findOne({where : {
-        //     password: password
-        // }});
 
         if(!userEmail) {
             return res.status(404).json({
