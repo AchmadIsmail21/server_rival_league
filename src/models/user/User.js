@@ -1,18 +1,25 @@
+
 const userModel = (sequelize, Sequelize) => {
-    const User = sequelize.define("tb_m_user", {
+    const User = sequelize.define("tb_user_profile", {
         email: {
             type: Sequelize.STRING
         },
-        fullName: {
+        first_name: {
             type: Sequelize.STRING
         },
-        no_telpon: {
+        last_name: {
+            type: Sequelize.STRING
+        },
+        phone_number: {
             type: Sequelize.STRING
         },
         password: {
             type: Sequelize.STRING
+        },
+        birth_date: {
+            type: Sequelize.DATE
         }
-    });
+    }, {timestamps: false});
 
     return User
 }

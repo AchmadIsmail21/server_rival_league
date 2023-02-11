@@ -1,5 +1,6 @@
 import express from "express"
-import { loginUser, registerUser } from "../controllers/userController.js"
+import { getUserById, loginUser, registerUser } from "../controllers/userController.js"
+import { verifyToken } from "../middleware/auth.js";
 
 const user_routes = express.Router()
 
@@ -7,7 +8,10 @@ const user_routes = express.Router()
 user_routes.post("/api/user/create", registerUser);
 
 //routes login
-user_routes.post("/api/user/login", loginUser)
+user_routes.post("/api/user/login", loginUser);
+
+//routes get user by id
+user_routes.get("/api/user/:id", verifyToken, getUserById);
 
 
 export default user_routes;
